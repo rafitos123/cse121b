@@ -21,6 +21,8 @@
           <div class="card-body">
             <h5 class="card-title">Where do you live?</h5>
             <input type="text" placeholder="Your City"/>
+            <label for=""><input type="text" id="name" placeholder="Your name"/><br></label>
+            <button type="button" class="btn btn-primary">Submit</button>
           </div>
         </div>
       </div>
@@ -29,16 +31,14 @@
           <div class="card-body">
             <h5 class="card-title">Your information</h5>
             <section>
-              <label for=""><input type="text" id="name" placeholder="Your name"/><br></label>
               <label for=""><input type="text" id="schedule" placeholder="Your schedule"/></label>
               <label for=""><input type="time" id="appt" name="appt"></label>
               <label for="">
 
               </label>
-              <input type="button" onclick="schedule.information()" class="btn btn-primary">
+              <a type="button" id="newButton" class="btn btn-primary">Add item</a>
               
             </section>
-            <button type="button" class="btn btn-primary">Submit</button>
           </div>
         </div>
       </div>
@@ -48,6 +48,7 @@
         <div class="col">
             <div class="content" style="display: none;">
               <section>
+                <h3 id="welcome"></h3>
                 <h2 id="place"></h2>
                 <span id="degrees"></span>
                 <br />
@@ -57,22 +58,22 @@
             </div>  
         </div>
         <div class="col">
-          <table >
-            <thead>
-              <th>Activity</th>
-              <th>Time</th>
-            </thead>
-            <tbody>
-
-            </tbody>
-          </table>
+              <h4>Your schedule:</h4>
+              <h2 id="time"></h2>
+         
         </div>
+
       </div>
     </div>
    
   </main>
-  <script src="scripts/project.js"></script>
-  <script type="text/javascript" src="scripts/exportProject.js"></script>
-  
+  <footer>
+    <p id="footerText">
+      © <span id="year"></span>.:|:. Rafael Antunes .:|:. São Paulo
+    </p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+  </footer>
+  <script type="module" src="scripts/project.js"></script>
+  <script type="module" src="scripts/exportProject.js"></script>
 </body>
 </html>
